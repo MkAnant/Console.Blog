@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<body id="readEJS">
+    <main>
+        <div class="container-fluid col-10">
+            <div class="row mt-5">
+                <div class="col-4">
+                    <div class="col-6 m-4">
+                        <h1 class="display-3 fw-semibold"><%= articles[i][0] %></h1>
+                    </div>
+                </div>
+                <div class="col-8 d-flex group rounded-4">
+                    <div class="col-6 m-4">
+                        <img src="/images/<%=articles[i][1]%>" alt="<%=articles[i][1]%> img" width="90%" height="140" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid col-10">
+            <div class="row mt-5 p-4 group rounded-4">
+                <div class="col-12">
+                    <p class="card-text"><%= articles[i][2] %></p>
+                </div>
+                <div class="d-grid gap-4 d-flex justify-content-md-center mt-3">
+                    <a href="/edit"><button type="button" class="btn fs-6 fw-semibold me-md-2 editBtn">Edit Selected</button></a>
+                    <a href="/delete"><button type="button" class="btn fs-6 fw-semibold me-md-2 btn-outline-dark secondBtn">Delete Selected</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

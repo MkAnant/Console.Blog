@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+<body id="createEJS">
+    <main>
+        <form action="/create-submit" method="post">
+            <div class="container-fluid col-10">
+                <div class="row mt-5">
+                    <div class="col-4">
+                        <h1 class="display-2 fw-semibold">Write Your Story!</h1>
+                    </div>
+                    <div class="col-8 d-flex group rounded-4">
+                        <div class="col-6 m-4">
+                            <label for="createTitle" class="fs-2 fw-semibold">Title</label><br>
+                            <input type="text" name="createTitle" id="createTitle" class="w-100 mt-3 fs-3 p-3" required>
+                        </div>
+                        <div class="col-6 m-4">
+                            <label for="createCover" class="fs-2 fw-semibold">Cover Image</label><br>
+                            <input type="file" name="createCover" id="createCover" class="mt-3 fs-6 fw-semibold">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid col-10">
+                <div class="row mt-5 p-4 group rounded-4">
+                    <div class="col-12">
+                        <label for="createBlog" class="fs-2 fw-semibold">Console.Blog (“Your Heart out!”);</label><br>
+                        <textarea name="createBlog" id="createBlog" class="mt-3 w-100 fs-3 p-3" placeholder="Your Story here.."></textarea>
+                    </div>
+                    <div class="d-grid gap-4 d-flex justify-content-md-center mt-3">
+                        <input type="submit" class="btn fs-6 fw-semibold me-md-2 createBtn">
+                        <a href="/show"><button type="button" class="btn fs-6 fw-semibold btn-outline-dark secondBtn">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

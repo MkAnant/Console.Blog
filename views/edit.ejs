@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<body id="editEJS">
+    <main>
+        <form action="/edit-submit" method="post">
+            <div class="container-fluid col-10">
+                <div class="row mt-5">
+                    <div class="col-4">
+                        <h1 class="display-2 fw-semibold">Update Your Story!</h1>
+                    </div>
+                    <div class="col-8 d-flex group rounded-4">
+                        <div class="col-6 m-4">
+                            <label for="editTitle" class="fs-2 fw-semibold">Title</label><br>
+                            <input type="text" name="editTitle" id="editTitle" class="w-100 mt-3 fs-3 p-3" value="<%= article.title %>" required>
+                        </div>
+                        <div class="col-6 m-4">
+                            <label for="editCover" class="fs-2 fw-semibold">Cover Image</label><br>
+                            <input type="hidden" name="existingImage" value="<%= article.image %>">
+                            <input type="file" name="editCover" id="editCover" class="mt-3 fs-6 fw-semibold">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid col-10">
+                <div class="row mt-5 p-4 group rounded-4">
+                    <div class="col-12">
+                        <label for="editBlog" class="fs-2 fw-semibold">Console.Blog (“Your Heart out!”);</label><br>
+                        <textarea name="editBlog" id="editBlog" class="mt-3 w-100 fs-3 p-3"><%= article.blog %></textarea>
+                    </div>
+                    <div class="d-grid gap-4 d-flex justify-content-md-center mt-3">
+                        <input type="hidden" name="title" value="<%= article.title %>">
+                        <input type="submit" class="btn fs-6 fw-semibold me-md-2 editBtn">
+                        <a href="/show"><button type="button" class="btn fs-6 fw-semibold btn-outline-dark secondBtn">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

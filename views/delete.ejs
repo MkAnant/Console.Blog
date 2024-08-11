@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<body id="deleteEJS">
+    <main>
+      
+      <div class="container-fluid vh-100 vw-100 d-flex justify-content-center align-items-center">
+        <div class="row mt-5 p-4 group rounded-4">
+          <form action="/delete" method="post">
+            <div class="col-12">
+              <h1 class="display-2 fw-semibold text-center">Delete Your<br>Story ?</h1>
+            </div>
+            <div class="d-grid gap-4 d-flex justify-content-md-center mt-5 pt-5">
+                <input type="hidden" name="title" value="<%= title %>">
+                <input type="submit" value="Yes, Delete" class="btn fs-6 fw-semibold me-md-2 btn-outline-dark secondBtn">
+                <a href="/show"><button type="button" class="btn fs-6 fw-semibold btn-outline-dark secondBtn">Cancel</button></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

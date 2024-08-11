@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <main>
+        <div class="container-fluid col-10">
+            <div class="row mt-5">
+                <div class="col-6">
+                    <a href="/">
+                        <h1 class="display-3 fw-semibold">Console.Blog!</h1>
+                        <p class="fs-3 fw-semibold">print your hearts out..</p>
+                    </a>
+                </div>
+                <div class="col-6 d-grid gap-4 d-flex justify-content-md-end mt-4">
+                    <a href="/create"><button type="button" class="btn fs-6 fw-semibold me-md-2 createBtn">Write New</button></a>
+                </div>
+            </div>
+        </div>
+        <% if(locals.articles) { %>
+        
+        <% for(let {image, title, blog} of articles){ %>
+        <form method="get">
+            <div class="container-fluid col-10 mb-5">
+                <div class="card p-3 border-dark">
+                    <div class="row g-0">
+                        <div class="col-md-3 d-flex justify-content-md-center align-items-md-center">
+                            <img src="/images/<%= image %>" alt="<%= title %> img"height="100" />
+                        </div>
+                        <div class="col-md-9 d-flex justify-content-md-end align-items-md-center">
+                            <div class="card-body">
+                                <h5 class="card-title fs-3 fw-semibold"><%= title %></h5>
+                                <p class="card-text"><%= blog %></p>
+                                <p class="card-text"><small class="text-body-secondary">Author : M.K. Anant</small></p>
+                                <input type="hidden" name="title" value="<%= title %>">
+                                <button type="submit" value="GET" formaction="/edit" class="btn fs-6 fw-semibold me-md-4 editBtn">Edit</button>
+                                <button type="submit" value="GET" formaction="/delete" class="btn fs-6 fw-semibold btn-outline-dark secondBtn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <% }} %>
+    </main>
+</body>
+</html>
