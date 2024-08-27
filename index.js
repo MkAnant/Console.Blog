@@ -15,7 +15,6 @@ const db = new pg.Client({
     // database: process.env.PG_DATABSE,
     // port: process.env.PG_PORT,
     // For cloud DB hosted on render.com and Github code
-    // For cloud DB hosted on render.com and Github code
     connectionString: process.env.DATABASE_URL//_EXT
     ,ssl: {
     rejectUnauthorized: false,
