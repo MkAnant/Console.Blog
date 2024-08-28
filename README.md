@@ -59,14 +59,22 @@ API Endpoints
 *   **POST /edit**: Update an existing blog post.
     
 *   **POST /delete**: Delete a blog post.
-    
 
-Contributing
-------------
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-Contributions are welcome! If you have suggestions or find issues, please open an issue or submit a pull request.
+<!-- CONTRIBUTING -->
+<h2 id="contributing"> 🤝 Contributing</h2>
 
-License
--------
+<p> Contributions are welcome! If you'd like to improve Console.Blog, follow these steps: </p>
+<ol>
+  <li>Fork the repository.</li>
+  <li>Create a new branch for your feature/bugfix.</li>
+  <li>Submit a pull request with detailed information on your changes.</li>
+</ol>
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- LICENSE -->
+<h2 id="license"> 📝 License</h2>
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
